@@ -1,0 +1,483 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <!-- =====================================
+         1. PENGATURAN DASAR WEBSITE
+    ====================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nusantara Net Solusi | Jasa IT & Jaringan</title>
+
+    <meta name="description"
+        content="Nusantara Net Solusi melayani instalasi jaringan, CCTV, dan IT Support.">
+
+    <!-- =====================================
+         2. TAILWIND CSS MELALUI CDN
+         Tidak perlu install Tailwind
+    ====================================== -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- =====================================
+         3. SUPABASE JAVASCRIPT CLIENT
+         Tidak perlu npm install
+    ====================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- =====================================
+         4. KONFIGURASI WARNA WEBSITE
+    ====================================== -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- =====================================
+         5. NAVBAR / MENU NAVIGASI
+    ====================================== -->
+    <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
+
+        <div class="max-w-6xl mx-auto px-6 py-4 flex
+                    justify-between items-center">
+
+            <!-- Nama Perusahaan -->
+            <h1 class="text-xl font-bold">
+                Nusantara<span class="text-yellow-400">Net</span>
+            </h1>
+
+            <!-- Menu Navigasi -->
+            <div class="space-x-5 text-sm md:text-base">
+
+                <a href="#beranda"
+                   class="hover:text-yellow-400">
+                    Beranda
+                </a>
+
+                <a href="#layanan"
+                   class="hover:text-yellow-400">
+                    Layanan
+                </a>
+
+                <a href="#kontak"
+                   class="hover:text-yellow-400">
+                    Kontak
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================
+         6. HERO SECTION / HALAMAN UTAMA
+    ====================================== -->
+    <section id="beranda"
+        class="bg-gradient-to-r from-blue-900 to-blue-600
+               text-white py-24 px-6">
+
+        <div class="max-w-6xl mx-auto text-center">
+
+            <p class="text-yellow-300 font-semibold mb-4">
+                Koneksi Cepat, Bisnis Melesat
+            </p>
+
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                Solusi Jaringan dan Teknologi
+                untuk Bisnis Anda
+            </h2>
+
+            <p class="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+                Kami menyediakan jasa instalasi jaringan LAN,
+                Wi-Fi, pemasangan CCTV, serta layanan IT Support
+                profesional untuk rumah, sekolah, dan perusahaan.
+            </p>
+
+            <!-- Tombol menuju bagian kontak -->
+            <a href="#kontak"
+                class="inline-block bg-yellow-400 text-blue-900
+                       font-bold px-8 py-3 rounded-lg
+                       hover:bg-yellow-300 transition">
+
+                Hubungi Kami
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         7. BAGIAN LAYANAN PERUSAHAAN
+    ====================================== -->
+    <section id="layanan" class="py-20 px-6">
+
+        <div class="max-w-6xl mx-auto">
+
+            <div class="text-center mb-12">
+
+                <h2 class="text-3xl font-bold text-blue-900">
+                    Layanan Kami
+                </h2>
+
+                <p class="text-gray-500 mt-3">
+                    Solusi teknologi untuk kebutuhan Anda.
+                </p>
+
+            </div>
+
+            <!-- Grid tiga kartu layanan -->
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Layanan 1 -->
+                <div class="bg-white p-8 rounded-xl shadow
+                            hover:shadow-xl transition">
+
+                    <div class="text-5xl mb-5">
+                        🌐
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Instalasi LAN / Wi-Fi
+                    </h3>
+
+                    <p class="text-gray-600">
+                        Pemasangan jaringan komputer,
+                        konfigurasi router, access point,
+                        dan pengaturan koneksi internet.
+                    </p>
+
+                </div>
+
+
+                <!-- Layanan 2 -->
+                <div class="bg-white p-8 rounded-xl shadow
+                            hover:shadow-xl transition">
+
+                    <div class="text-5xl mb-5">
+                        📹
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Pemasangan CCTV
+                    </h3>
+
+                    <p class="text-gray-600">
+                        Instalasi CCTV untuk rumah,
+                        sekolah, kantor, dan area bisnis
+                        dengan pemantauan melalui smartphone.
+                    </p>
+
+                </div>
+
+
+                <!-- Layanan 3 -->
+                <div class="bg-white p-8 rounded-xl shadow
+                            hover:shadow-xl transition">
+
+                    <div class="text-5xl mb-5">
+                        🖥️
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Maintenance Server
+                    </h3>
+
+                    <p class="text-gray-600">
+                        Perawatan komputer, server,
+                        troubleshooting jaringan,
+                        dan dukungan teknis IT.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         8. FORMULIR KONTAK
+         Data akan dikirim ke Supabase
+    ====================================== -->
+    <section id="kontak"
+        class="bg-blue-50 py-20 px-6">
+
+        <div class="max-w-xl mx-auto">
+
+            <div class="text-center mb-10">
+
+                <h2 class="text-3xl font-bold text-blue-900">
+                    Hubungi Kami
+                </h2>
+
+                <p class="text-gray-600 mt-3">
+                    Silakan isi formulir berikut untuk
+                    menghubungi tim kami.
+                </p>
+
+            </div>
+
+
+            <!-- Formulir input data pengunjung -->
+            <form id="formKontak"
+                class="bg-white p-8 rounded-xl shadow-lg">
+
+                <!-- Input nama -->
+                <div class="mb-5">
+
+                    <label class="block font-semibold mb-2">
+                        Nama Lengkap
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nama"
+                        maxlength="100"
+                        required
+                        placeholder="Masukkan nama Anda"
+                        class="w-full border border-gray-300
+                               rounded-lg px-4 py-3
+                               focus:outline-none
+                               focus:ring-2 focus:ring-blue-500">
+
+                </div>
+
+
+                <!-- Input nomor WhatsApp -->
+                <div class="mb-5">
+
+                    <label class="block font-semibold mb-2">
+                        Nomor WhatsApp
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="whatsapp"
+                        maxlength="20"
+                        required
+                        placeholder="Contoh: 081234567890"
+                        class="w-full border border-gray-300
+                               rounded-lg px-4 py-3
+                               focus:outline-none
+                               focus:ring-2 focus:ring-blue-500">
+
+                </div>
+
+
+                <!-- Input pesan -->
+                <div class="mb-6">
+
+                    <label class="block font-semibold mb-2">
+                        Pesan Anda
+                    </label>
+
+                    <textarea
+                        id="pesan"
+                        rows="4"
+                        maxlength="2000"
+                        required
+                        placeholder="Tuliskan kebutuhan Anda..."
+                        class="w-full border border-gray-300
+                               rounded-lg px-4 py-3
+                               focus:outline-none
+                               focus:ring-2 focus:ring-blue-500"></textarea>
+
+                </div>
+
+
+                <!-- Tombol kirim -->
+                <button
+                    type="submit"
+                    id="tombolKirim"
+                    class="w-full bg-blue-900 text-white
+                           font-bold py-3 rounded-lg
+                           hover:bg-blue-700 transition">
+
+                    Kirim Pesan
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         9. FOOTER / BAGIAN BAWAH WEBSITE
+    ====================================== -->
+    <footer class="bg-blue-950 text-white py-8 px-6">
+
+        <div class="max-w-6xl mx-auto text-center">
+
+            <h3 class="text-xl font-bold mb-3">
+                Nusantara Net Solusi
+            </h3>
+
+            <p class="text-blue-200">
+                Jasa Instalasi Jaringan, CCTV, dan IT Support
+            </p>
+
+            <p class="text-blue-200 mt-2">
+                Alamat: Banjar, Jawa Barat
+            </p>
+
+            <div class="border-t border-blue-800 mt-6 pt-5">
+
+                <p class="text-sm text-blue-300">
+                    &copy; 2026 Nusantara Net Solusi.
+                    All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================
+         10. JAVASCRIPT DAN KONFIGURASI SUPABASE
+    ====================================== -->
+    <script>
+
+        // -------------------------------------
+        // A. MASUKKAN KONFIGURASI SUPABASE
+        // -------------------------------------
+
+        // Ganti dengan Project URL milik siswa
+        const SUPABASE_URL = https://vjjgdahujuccxdctcbtj.supabase.co/rest/v1/
+
+        // Ganti dengan Publishable Key / anon key
+        const SUPABASE_ANON_KEY = sb_publishable_qeBUUYtumsgChrtuoyM3XQ_lHH9vh4X
+        // -------------------------------------
+        // B. MEMBUAT KONEKSI KE SUPABASE
+        // -------------------------------------
+
+        // Membuat client Supabase menggunakan CDN
+        const supabaseClient = window.supabase.createClient(
+            SUPABASE_URL,
+            SUPABASE_ANON_KEY
+        );
+
+
+        // -------------------------------------
+        // C. MENGAMBIL ELEMEN FORMULIR
+        // -------------------------------------
+
+        const formKontak = document.getElementById("formKontak");
+
+        const tombolKirim = document.getElementById("tombolKirim");
+
+
+        // -------------------------------------
+        // D. PROSES KIRIM DATA KE DATABASE
+        // -------------------------------------
+
+        formKontak.addEventListener("submit", async function(event) {
+
+            // Mencegah halaman melakukan refresh
+            event.preventDefault();
+
+            // Mengambil nilai dari input formulir
+            const nama = document.getElementById("nama").value.trim();
+
+            const whatsapp = document.getElementById("whatsapp").value.trim();
+
+            const pesan = document.getElementById("pesan").value.trim();
+
+
+            // Validasi sederhana sebelum dikirim
+            if (
+                nama.length < 2 ||
+                whatsapp.length < 8 ||
+                whatsapp.length > 20 ||
+                pesan.length < 5 ||
+                pesan.length > 2000
+            ) {
+
+                alert("Mohon periksa kembali data yang Anda masukkan!");
+
+                return;
+
+            }
+
+
+            // Mengubah tombol ketika proses pengiriman
+            tombolKirim.disabled = true;
+
+            tombolKirim.innerText = "Mengirim Pesan...";
+
+
+            try {
+
+                // Mengirim data ke tabel pesan_masuk
+                const { data, error } = await supabaseClient
+                    .from("pesan_masuk")
+                    .insert([
+                        {
+                            nama: nama,
+                            whatsapp: whatsapp,
+                            pesan: pesan
+                        }
+                    ]);
+
+
+                // Jika terjadi kesalahan
+                if (error) {
+
+                    console.error("Supabase Error:", error);
+
+                    alert("Pesan gagal dikirim: " + error.message);
+
+                    return;
+
+                }
+
+
+                // Jika pengiriman berhasil
+                alert("Pesan berhasil terkirim!");
+
+                // Mengosongkan formulir
+                formKontak.reset();
+
+
+            } catch (error) {
+
+                // Menampilkan error jika koneksi bermasalah
+                console.error("Kesalahan:", error);
+
+                alert("Terjadi kesalahan koneksi. Silakan coba lagi.");
+
+            } finally {
+
+                // Mengaktifkan kembali tombol
+                tombolKirim.disabled = false;
+
+                tombolKirim.innerText = "Kirim Pesan";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
